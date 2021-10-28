@@ -24,6 +24,9 @@ public class HotelReservationSystem {
 		Date date2 = new SimpleDateFormat("dd-MM-yyyy").parse(sDate2);
 		System.out.println(sDate1 + "\t" + date1);
 		System.out.println(sDate2 + "\t" + date2);
+
+		HotelReservationSystem hotel = new HotelReservationSystem();
+		hotel.addRating();
 	}
 
 	public ArrayList<Hotel> hotelList = new ArrayList<Hotel>();
@@ -113,6 +116,19 @@ public class HotelReservationSystem {
 		}
 		if (sum_RidgeWood < sum_LakeWood && sum_RidgeWood < sum_BridgeWood) {
 			System.out.println("RidgeWood with total rates $370.");
+		}
+	}
+
+	public void addRating() {
+		String hotel = null;
+		if (hotel == "LakeWood") {
+			System.out.println("LakeWood rating is 3.");
+		}
+		if (hotel == "BridgeWood") {
+			System.out.println("BridgeWood rating is 4.");
+		}
+		if (hotel == "RidgeWood") {
+			System.out.println("RidgeWood rating is 5.");
 		}
 	}
 }
