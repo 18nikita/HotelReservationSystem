@@ -7,6 +7,13 @@ public class HotelReservationSystem {
 	public static void main(String[] args) {
 		System.out.println("..Welcome to Hotel Reservation System..");
 		findCheapHotel();
+
+		HotelReservationSystem Lakewood = new HotelReservationSystem();
+		HotelReservationSystem Bridgewood = new HotelReservationSystem();
+		HotelReservationSystem Ridgewood = new HotelReservationSystem();
+		Lakewood.addWeekdayWeekendRate();
+		Bridgewood.addWeekdayWeekendRate();
+		Ridgewood.addWeekdayWeekendRate();
 	}
 
 	public ArrayList<Hotel> hotelList = new ArrayList<Hotel>();
@@ -40,6 +47,30 @@ public class HotelReservationSystem {
 		if (RidgeWood_Rate < BridgeWood_Rate && RidgeWood_Rate < LakeWood_Rate) {
 			System.out.println("RidgeWood");
 			System.out.println(RidgeWood_Rate);
+		}
+	}
+
+	public void addWeekdayWeekendRate() {
+		String hotel = null;
+		if (hotel == "LakeWood") {
+			int weekday_rate = 110;
+			int weekend_rate = 90;
+			System.out.println("Rate of Regular Customers of LakeWood Hotel for Weekday & WeekendDay is: " + weekday_rate
+					+ weekend_rate + "respectively");
+		}
+		
+		if (hotel == "BridgeWood") {
+			int weekday_rate = 150;
+			int weekend_rate = 50;
+			System.out.println("Rate of Regular Customers of BridgeWood Hotel for Weekday & WeekendDay is: " + weekday_rate
+					+ weekend_rate + "respectively");
+		}
+		
+		if (hotel == "RidgeWood") {
+			int weekday_rate = 220;
+			int weekend_rate = 150;
+			System.out.println("Rate of Regular Customers of RidgeWood Hotel for Weekday & WeekendDay is: " + weekday_rate
+					+ weekend_rate + "respectively");
 		}
 	}
 }
